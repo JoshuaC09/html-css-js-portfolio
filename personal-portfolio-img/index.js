@@ -40,3 +40,16 @@ form.addEventListener("submit", (e) => {
     })
     .catch((error) => console.error("Error!", error.message));
 });
+
+const headerText = document.querySelector(".header-text p");
+
+function updateHeaderText() {
+  if (window.innerWidth <= 600) {
+    headerText.innerHTML = "Web Developer/Aspirant <br> .NET Developer";
+  } else {
+    headerText.innerHTML = "Web Developer/Aspirant .NET Developer";
+  }
+}
+
+window.addEventListener("load", updateHeaderText);
+window.addEventListener("resize", updateHeaderText);
